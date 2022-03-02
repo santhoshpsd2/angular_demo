@@ -1,0 +1,25 @@
+<div class="root">
+  <div class="inner">
+    <h1>Exchange Rate Calculator</h1>
+    <p>Choose the currency and the amounts to get the exchange rates</p>
+<div class="div1">
+  <select name="" id="options1" #opt1 appExchangeCurr>
+    <option value={{cur}} *ngFor="let cur of currnames">{{cur}}</option>
+  </select>
+  <input type="number" name="" id="num1" min="0" appExchangeAmt [value]="amount1">
+</div>
+
+<div class="div2">
+  <button class="btn" (click)="swapfunc()">Swap</button>
+  <p>1{{curr1}} = {{exval}}{{curr2}}</p>
+</div>
+
+<div class="div3">
+  <select name="" id="options2" #opt2 appExchangeCurr>
+    <option value={{cur}} *ngFor="let cur of currnames">{{cur}}</option>
+  </select>
+  <input type="number" name="" id="num2" min="0" appExchangeAmt [value]="amount2">
+</div>
+
+  </div>
+</div>

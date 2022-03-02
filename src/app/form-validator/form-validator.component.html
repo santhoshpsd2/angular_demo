@@ -1,0 +1,32 @@
+<div class="root">
+  <div class="form-container">
+    <h1>Register With Us</h1>
+    <form (ngSubmit) = 'formsubmit()' class="myform" [formGroup]="signupform">
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" formControlName = 'username'>
+        <!-- <p *ngIf="signupform.get('username').errors>Username is required</p> -->
+      </div>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" formControlName = 'email'>
+        <!-- <p *ngIf="formdata.controls['username'].errors['required'] && email1.touched">Email is required</p> -->
+        <!-- <p *ngIf="email1.errors['email'] && email1.touched">Email is Invalid</p> -->
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" formControlName = 'password'>
+        <!-- <p *ngIf="pass1.invalid && pass1.touched">Password is required</p> -->
+        <!-- <p *ngIf="pass1.errors.required"></p> -->
+      </div>
+      <div class="form-control">
+        <label for="conf_pass">Confirm Password</label>
+        <input type="text" id="conf_pass" name="confirm_password" formControlName = 'confirm'>
+        <!-- <p *ngIf="pass2.invalid && pass2.touched">password required</p>
+        <p *ngIf = "!match">Password wont match</p> -->
+      </div>
+
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </div>
+</div>

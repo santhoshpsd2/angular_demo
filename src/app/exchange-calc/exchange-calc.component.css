@@ -1,0 +1,25 @@
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: 350px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.div1,
+.div2,
+.div3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  text-align: right;
+}

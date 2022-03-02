@@ -1,0 +1,30 @@
+<div class="root">
+  <div class="inner">
+    <h1>DOM Array Methods</h1>
+    <div class="layout">
+      <div class="buttons">
+        <button class="btn" (click) = "adduser()">Add User</button>
+        <button class="btn" (click)="doublemoney()">Double Money</button>
+        <button class="btn">Show Only Millionaires</button>
+        <button class="btn">Sort By Richest</button>
+        <button class="btn" (click) = "calcwealth()">Calculate Entire Wealth</button>
+      </div>
+      <div class="right">
+        <div class="person-top">
+          <h2>Person</h2>
+          <p>Wealth</p>
+        </div>
+        <div class="persons">
+          <div class="person" *ngFor="let user of data">
+            <h3>{{user.fname}} {{user.lname}}</h3>
+            <p>${{user.format}}</p>
+          </div>
+          <div class="total" *ngIf="total">
+            <h3>Total Wealth:</h3>
+            <p>${{totalformat}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
